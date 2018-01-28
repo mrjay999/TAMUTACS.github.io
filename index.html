@@ -1,266 +1,391 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-	<head>
-		<title>Texas A&M Computing Society</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body class="homepage">
-		<div id="page-wrapper">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <meta name="description" content="The Texas A&M Computing Society is dedicated to promoting upcoming technological interests among fellow Aggies.">
+    <meta name="author" content="Joshua Salinas">
+    <title>TACS</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/indexAssets/creative.css" rel="stylesheet">
+    <link href="css/indexAssets/bootstrap.css" rel="stylesheet">
+    <!-- Custom fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/scrollreveal.js"></script>
+    <script src="js/typed.js" type="text/javascript"></script>
+    <script>
+        window.sr = ScrollReveal();
+    </script>
+    <script>
+        $(document).ready(function() {
 
-			<!-- Header -->
-				<div id="header-wrapper">
-					<div id="header" class="container">
+            $('.faq_question').click(function() {
 
-						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">Texas A&M Computing Society</a></h1>
+                if ($(this).parent().is('.open')) {
+                    $(this).closest('.faq').find('.faq_answer_container').animate({ 'height': '0' }, 500);
+                    $(this).closest('.faq').removeClass('open');
 
-						<!-- Nav -->
-							<nav id="nav">
-								<ul>
-									<li>
-										<a href="#">Social Media</a>
-										<ul>
-											<li><a href="https://www.facebook.com/groups/349859495183991/">Facebook</a></li>
-											<li><a href="https://twitter.com/tamutacs">Twitter</a></li>
-										</ul>
-									</li>
-										
-										<!-- <a href="#">Spotlight Winners</a>
-										
-										<ul>
-											<li><a href="#">2017</a>
-												<ul>
-													<li><a href="#">Jan-Feb</a></li>
-													<li><a href="#">Mar-Apr</a></li>
-													<li><a href="#">Sept-Oct</a></li>
-													<li><a href="#">Nov-Dec</a></li>
-												</ul>
-											</li>
-											<li><a href="#">2016</a>
-												<ul>
-													<li><a href="#">Jan-Feb</a></li>
-													<li><a href="#">Mar-Apr</a></li>
-													<li><a href="#">Sept-Oct</a></li>
-													<li><a href="#">Nov-Dec</a></li>
-												</ul>
-											</li>
-											<li><a href="#">2015</a>
-												<ul>
-													<li><a href="#">Jan-Feb</a></li>
-													<li><a href="#">Mar-Apr</a></li>
-													<li><a href="#">Sept-Oct</a></li>
-													<li><a href="#">Nov-Dec</a></li>
-												</ul>
-											</li>
-										</ul>
-									</li>
-									-->
-									<li><a href="ourorganization.html">Our Organization</a></li>
-									<li class="break"><a href="spotlight.html">Spotlight</a></li>
-									<li><a href="contact.html">Contact Us</a></li>
-								</ul>
-							</nav>
+                } else {
+                    var newHeight = $(this).closest('.faq').find('.faq_answer').height() + 'px';
+                    $(this).closest('.faq').find('.faq_answer_container').animate({ 'height': newHeight }, 500);
+                    $(this).closest('.faq').addClass('open');
+                }
 
-					</div>
+            });
 
-					<!-- Hero -->
-						<section id="hero" class="container">
-							<div class="image-wrapper">
-								<a href="#" class="image logo"><img src="images/TACSLogoOfficialHomePage.png" alt="" /></a>
-							</div>
-							<!--<header>
-								<h2>Welcome!</h2>
-							</header>
-							<p>
-								Join us for our next meeting
-							</p>
-							-->
-							<ul class="actions">
-								<li><a href="meetings.html" class="button">Meeting Information</a></li>
-							</ul>
-						</section>
+        });
+    </script>
+    <style>
+        .sr .intro {
+            visibility: hidden;
+        }
+        .sr .contact {
+            visibility: hidden;
+        }
+    </style>
+</head>
 
-				</div>
+<body id="page-top">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">TACS</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#events">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#spotlight">Spotlight</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- end nav -->
+<!-- main -->
+<header class="masthead text-center text-white d-flex" style="">
+    <div class="container my-auto">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div id="typed-strings">
+                    <h1 class="text-center">{TACS}</h1>
+                </div>
+                <span id="typed"></span>
+                <script>
+                    var typed = new Typed("#typed", {
+                        stringsElement: '#typed-strings',
+                        typeSpeed: 100,
+                        startDelay: 1000,
+                        showCursor: true,
+                        loop: false
+                    });
+                </script>
+                <hr>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <div class="intro">
+                    <p class="text-faded mb-5">The Texas A&M Computing Society is dedicated to promoting upcoming technological interests among fellow Aggies.</p>
+                </div>
+                <script>
+                    sr.reveal('.intro', { duration: 1000, delay: 2000, useDelay: 'onload' })
+                </script>
+            </div>
+        </div>
+    </div>
+    <script>
+        sr.reveal('.rev2', { duration: 1000, delay: 200, useDelay: 'onload' })
+    </script>
+</header>
+<!-- Events -->
+<section class="bg-primary" id="events">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <div class="events">
+                    <h2 class="section-heading text-white">Join us!</h2>
+                    <hr class="light my-4">
+                </div>
+                <div class="events1">
+                    <p class="text-faded mb-4">Whether you are a coding-wizard or just learning how to type, we welcome all Aggies to partake in our events with awesome speakers!</p>
+                    <iframe title="TACS Meetings" src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=rd269bkh6hss3anopf8iahg7m8%40group.calendar.google.com&amp;color=%230F4B38&amp;ctz=America%2FChicago" style="border: 0" width="100%" height="526" frameborder="0" scrolling="no" "></iframe>                    </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        sr.reveal('.events', { duration: 1200 })
+    </script>
+    <script>
+        sr.reveal('.events1', { duration: 1200 })
+    </script>
+</section>
+<!-- Spotlight -->
+<section class=" " id="spotlight ">
+    <div class="container ">
+        <div class="col-lg-12 text-primary ">
+            <div class="spot ">
+                <h2 class="section-heading text-primary ">Spotlight</h2>
+                <hr class="cus ">
+                <br>
+                <br>
+                <div class="spot1 ">
+                    <p class="text-faded mb-4 text-primary ">Spotlight is a great opportunity to showcase your knowledge and skills of programming. You can review our rules and submit a project below.</p>
+                    <div class="text-center "><a href="./submit.html "><button class="peterriver text-center ">Spotlight</button></a></div>
+                </div>
 
-			<!-- Features 1 -->
-			<!--
-				<div class="wrapper">
-					<div class="container">
-						<div class="row">
-							<section class="6u 12u(narrower) feature">
-								<div class="image-wrapper first">
-									<a href="#" class="image featured first"><img src="images/pic01.jpg" alt="" /></a>
-								</div>
-								<header>
-									<h2>Semper magna neque vel<br />
-									adipiscing curabitur</h2>
-								</header>
-								<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur vel
-								sem sit dolor neque semper magna. Lorem ipsum dolor sit amet consectetur et sed
-								adipiscing elit. Curabitur vel sem sit.</p>
-								<ul class="actions">
-									<li><a href="#" class="button">Elevate my awareness</a></li>
-								</ul>
-							</section>
-							<section class="6u 12u(narrower) feature">
-								<div class="image-wrapper">
-									<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								</div>
-								<header>
-									<h2>Amet lorem ipsum dolor<br />
-									sit consequat magna</h2>
-								</header>
-								<p>Lorem ipsum dolor sit amet consectetur et sed adipiscing elit. Curabitur vel
-								sem sit dolor neque semper magna. Lorem ipsum dolor sit amet consectetur et sed
-								adipiscing elit. Curabitur vel sem sit.</p>
-								<ul class="actions">
-									<li><a href="#" class="button">Elevate my awareness</a></li>
-								</ul>
-							</section>
-						</div>
-					</div>
-				</div>
-			-->
-			
-			<!-- Features 2 -->
-				 <div class="wrapper">
-					<section class="container">
-					
-						<header class="major">
-							<p><b>Our Organization</b></p>
-						</header>
-					
-						<div class="row features">
-							<section class="4u 12u(narrower) feature">
-								<div class="image-wrapper first">
-									<a href="ourorganization.html" class="image featured"><img src="images/tacsinfo.jpg" alt="" /></a>
-								</div>
-								<p>
-									TACS is the official student chapter of the Association of Computing Machinery and IEEE Computer Society.
-									We encourage professional development by sponsoring industry speakers and professors while providing numerous networking opportunities.
-								</p>
-							</section>
-							<section class="4u 12u(narrower) feature">
-								<div class="image-wrapper">
-									<a href="spotlight.html" class="image featured"><img src="images/spotlight.jpg" alt="" /></a>
-								</div>
-								<p>
-									We host the Spotlight competition for TACS members to show off their awesome creations and side projects. 
-									More information can be found on the Spotlight page!
-								</p>
-							</section>
-							<section class="4u 12u(narrower) feature">
-								<div class="image-wrapper">
-									<a href="#" class="image featured"><img src="images/tacsconnect.jpg" alt="" /></a>
-								</div>
-								<p>
-									Interested in joining TACS? Check out our next meeting time above, see what's going on with TACS at Our Organization, or head over to our Social Media.
-									Want to be notified when we're having meetings? Sign up by emailing tacs-officers@lists.tamu.edu!
-								</p>
-							</section>
-						</div>
-						<ul class="actions major">
-							<li><a href="spotlight.html" class="button">Spotlight</a></li>
-						</ul>
-					</section>
-				</div>
-			
-				
-			<!-- Promo -->
-			<!--
-			<div id="promo-wrapper">
-				<section id="promo">
-					<h2>This is a fun little thing that we can use to link to something significant.</h2>
-					<a href="#" class="button">Onwards to Science!</a>
-				</section>
-			</div> 	
 
-			<!-- Footer -->
-				<div id="footer-wrapper">
-					<div id="footer" class="container">
-						<div id="owner" class="container">
-							<ul class="menu">
-								<li>
-									<br />Texas A&M Computing Society 2016-2017 | 
-									<a href="https://www.facebook.com/groups/349859495183991/"><span class="extra">facebook.com/</span>tamutacs</a> | 
-									<a href="https://twitter.com/tamutacs"><span class="extra">twitter.com/</span>tamutacs</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				
-				<!-- Old Footer -->
-				<!--
-				<div id="footer-wrapper">
-					<div id="footer" class="container">
-						<header class="major">
-							<h2>Interested in the latest TACS news and meetings?</h2>
-							<p>Just send us a name and email address, and we'll add you to the mailing list! <br />
-							You will be occasionally emailed about upcoming meetings and significant CS-related on-campus events.
-							</p>
-						</header>
-						<div class="row">
-							<section class="6u 12u(narrower)">
-								<form method="post" action="#">
-									<div class="row 50%">
-										<div class="6u 12u(mobile)">
-											<input name="name" placeholder="Name" type="text" />
-										</div>
-										<div class="6u 12u(mobile)">
-											<input name="email" placeholder="Email" type="text" />
-										</div>
-									</div>
-									<div class="row 50%">
-										<div class="12u">
-											<ul class="actions">
-												<li><input type="submit" value="Send Email" /></li>
-												<li><input type="reset" value="Clear email" /></li>
-											</ul>
-										</div>
-									</div>
-								</form>
-							</section>
-							<section class="6u 12u(narrower)">
-								<div class="row 0%">
-									<ul class="divided icons 6u 12u(mobile)">
-										<li class="icon fa-facebook"><a href="https://www.facebook.com/groups/349859495183991/"><span class="extra">facebook.com/</span>tamutacs</a></li>
-										<li class="icon fa-twitter"><a href="https://twitter.com/tamutacs"><span class="extra">twitter.com/</span>tamutacs</a></li>
-									</ul>
-									<ul class="divided icons 6u 12u(mobile)">
-									</ul>
-								</div>
-							</section>
-						</div>
-						<div id="owner" class="container">
-							<ul class="menu">
-								<li><br />Texas A&M Computing Society 2016-2017</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				-->
+            </div>
+        </div>
+        <br><br>
+        <div class="tab ">
+            <table class="item-list ">
+                <tr>
+                    <th class="text-primary ">Rank</th>
+                    <th class="text-primary ">Name</th>
+                    <th class="text-primary ">Website</th>
+                </tr>
+                <tr class="text-primary " style="font-family: 'Raleway', sans-serif; ">
+                    <td class="text-primary ">00</td>
+                    <td class="text-center " style="font-family: 'Raleway', sans-serif; ">
+                        <h2 class="text-center " style="font-family: 'Raleway', sans-serif; ">Your name could be here!</h2>
+                    </td>
+                    <td>
+                        <h2 style="font-family: 'Raleway', sans-serif; ">https://yourWebsiteCouldBeHere!</h2>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script>
+        sr.reveal('.spot', { duration: 1200 })
+    </script>
+    <script>
+        sr.reveal('.tab', { duration: 1200 })
+    </script>
+</section>
+<section id="about " class="bg-primary ">
+    <div class="container text-center ">
+        <div class="row ">
+            <div class="col-lg-8 mx-auto text-center ">
+                <div class="about ">
+                    <h2 class="section-heading text-white ">About us</h2>
+                    <hr class="light my-4 ">
+                </div>
+                <div class="faq ">
+                    <div class="faq_container text-left ">
+                        <div class="faq ">
+                            <div class="faq_question ">What is TACS?</div>
+                            <div class="faq_answer_container ">
+                                <div class="faq_answer text-faded " style="padding-left:20px; ">TACS (Texas A&M Computing Society) is the official student chapter of the Association of Computing Machinery and IEEE Computer Society. We encourage professional development by sponsoring industry speakers and professors while providing numerous networking opportunities.</div>
+                            </div>
+                        </div>
+                        <div class="faq ">
+                            <div class="faq_question ">What are the qualifications to join?</div>
+                            <div class="faq_answer_container ">
+                                <div class="faq_answer text-faded " style="padding-left:20px; ">At TACS, we welcome anyone! We want to serve as a platform for any student interested in becoming involved in the tech community.</div>
+                            </div>
+                        </div>
+                        <div class="faq ">
+                            <div class="faq_question ">When and where is the next meeting?</div>
+                            <div class="faq_answer_container ">
+                                <div class="faq_answer text-faded " style="padding-left:20px; ">Our event information is usually listed on our Google Calendar; However, if by chance certain information is missing, please feel free to contact one of the board members. </div>
+                            </div>
+                        </div>
+                        <div class="faq ">
+                            <div class="faq_question ">What are workshops?</div>
+                            <div class="faq_answer_container ">
+                                <div class="faq_answer text-faded " style="padding-left:20px; ">Workshops are a great way for you to get your feet wet with coding. On a given workshop event, we will focus on a precise topic such as the intro to python, and we will demo a simple application that others can follow along to. Our workshops are hosted by either a professor, alum, company rep, or one of our board members! </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        sr.reveal('.about', { duration: 1200 })
+    </script>
+    <script>
+        sr.reveal('.faq', { duration: 1200 })
+    </script>
+</section>
+<!-- Contact -->
+<section id="contact ">
+    <div class="container ">
+        <div class="row ">
+            <div class="col-lg-12 text-center ">
+                <h2 class="section-heading text-primary ">TACS Board Members</h2>
+                <hr class="my-4 cus ">
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="row no-gutters text-center justify-content-center ">
+            <!-- President -->
+            <div class="col-lg-3 col-md-6 text-center ">
+                <div class="service-box mx-auto ">
+                    <div class="block ">
+                        <div class="contact ">
+                            <img class="image " src="img/officers/benD.JPG " alt="president " width="240 " height="240 ">
+                            <div class="links__ ">
+                                <p class="text_title ">Ben D' Antonio</p>
+                                <p class="text-muted textp ">President</p>
+                                <a class="icons-sm " href="mailto:benjamin.dantonio@tamu.edu " target="_blank " rel="noopener "><i class="fa fa-align-center fa-envelope fa-2x "> </i></a>
+                            </div>
+                            <div class="avi__name ">Ben D'Antonio</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Faculty Sponsor -->
+            <div class="col-lg-3 col-md-6 text-center ">
+                <div class="service-box mx-auto ">
+                    <div class="block ">
+                        <div class="contact ">
+                            <img class="image " src="img/officers/drTyagi.JPG " alt="faculty sponsor " width="240 " height="240 ">
+                            <div class="links__ ">
+                                <p class="text_title ">Aakash Tyagi</p>
+                                <p class="text-muted textp ">Faculty Sponsor</p>
+                                <a class="icons-sm " href="mailto:tyagi@cse.tamu.edu " target="_blank " rel="noopener "><i class="fa fa-align-center fa-envelope fa-2x "> </i></a>
+                            </div>
+                            <div class="avi__name ">Aakash Tyagi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- VP -->
+            <div class="col-lg-3 col-md-6 text-center ">
+                <div class="service-box mx-auto ">
+                    <div class="block ">
+                        <div class="contact ">
+                            <img class="image " src="img/officers/chaseV.JPG " alt="vice president " width="240 " height="240 ">
+                            <div class="links__ ">
+                                <p class="text_title ">Chase Vandiver</p>
+                                <p class="text-muted textp ">Vice President</p>
+                                <a class=" " href="mailto:chasev13@tamu.edu " target="_blank " rel="noopener "><i class="fa fa-align-center fa-envelope fa-2x "> </i></a>
+                            </div>
+                            <div class="avi__name ">Chase Vandiver</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters text-center justify-content-center ">
+            <!-- Treasurer -->
+            <div class="col-lg-3 col-md-6 text-center ">
+                <div class="service-box mx-auto ">
+                    <div class="block ">
+                        <div class="contact ">
+                            <img class="image " src="https://via.placeholder.com/240x240 " alt="treasurer " width="240 " height="240 ">
+                            <div class="links__ ">
+                                <p class="text_title ">Gerald Hu</p>
+                                <p class="text-muted textp ">Treasurer</p>
+                                <a class="icons-sm " href="https://github.com/piezoelectric " target="_blank " rel="noopener "><i class="fa fa-github-square fa-2x "> </i></a>
+                                <a class="icons-sm " href="mailto:gerald.hu.1@tamu.edu " target="_blank " rel="noopener "><i class="fa fa-align-center fa-envelope fa-2x "> </i></a>
+                            </div>
+                            <div class="avi__name ">Gerald Hu</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Communications Officer -->
+            <div class="col-lg-3 col-md-6 text-center ">
+                <div class="service-box mx-auto ">
+                    <div class="block ">
+                        <div class="contact ">
+                            <img class="image " src="img/officers/akinA.JPG " alt="communications officer " width="240 " height="240 ">
+                            <div class="links__ ">
+                                <p class="text_title ">Akin Adegboye</p>
+                                <p class="text-muted textp ">Communications Officer</p>
+                                <a class="icons-sm fb-ic " href="https://www.facebook.com/akintunde.adegboye " target="_blank " rel="noopener "><i class="fa fa-align-center fa-facebook-square fa-2x "> </i></a>
+                                <a class="icons-sm " href="mailto:aadegboye94@tamu.edu " target="_blank " rel="noopener "><i class="fa fa-align-center fa-envelope fa-2x "> </i></a>
+                            </div>
+                            <div class="avi__name ">Akin Adegboye</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Webmaster -->
+            <div class="col-lg-3 col-md-6 text-center ">
+                <div class="service-box mx-auto ">
+                    <div class="block ">
+                        <div class="contact ">
+                            <img class="image " src="img/officers/joshS.JPG " alt="webmaster " width="240 " height="240 ">
+                            <div class="links__ ">
+                                <p class="text_title ">Joshua Salinas</p>
+                                <p class="text-muted textp ">Webmaster</p>
+                                <a class="icons-sm " href="https://twitter.com/@JoshDBWH " target="_blank " rel="noopener "><i class="fa fa-align-center fa-twitter-square fa-2x "> </i></a>
+                                <a class="icons-sm " href="https://www.facebook.com/joshua.salinas.7731 " target="_blank " rel="noopener "><i class="fa fa-align-center fa-facebook-square fa-2x "> </i></a>
+                                <a class="icons-sm " href="mailto:joshua.salinas.j@gmail.com " target="_blank " rel="noopener "><i class="fa fa-align-center fa-envelope fa-2x "> </i></a>
+                            </div>
+                            <div class="avi__name ">Joshua Salinas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            sr.reveal('.contact', { duration: 1200 })
+        </script>
+    </div>
+</section>
+<!-- Footer-->
+<div class="foot ">
+    <footer class="footer-bs ">
+        <div class="row ">
+            <div class="col-md-3 footer-brand animated fadeInLeft ">
+                <h2>{TACS}</h2>
+                <p>Bringing the content to the Aggies.</p>
+                <p>© 2018 Texas A&M Computing Society, All rights reserved.</p>
+            </div>
+            <div class="col-md-3 footer-nav animated fadeInUp ">
+                <h4>Menu —</h4>
+                <div class="col-md-3 ">
+                    <ul class="list ">
+                        <li><a class="nav-link js-scroll-trigger " href="#events ">Events</a></li>
+                        <li><a class="nav-link js-scroll-trigger " href="#spotlight ">Spotlight</a></li>
+                        <li><a class="nav-link js-scroll-trigger " href="#about ">About</a></li>
+                        <li><a class="nav-link js-scroll-trigger " href="#contact ">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 footer-nav ">
+                <h4>Contact —</h4>
+                <a class="icons-sm fb-ic " href="https://www.facebook.com/groups/349859495183991/ " target="_blank " rel="noopener "><i class="fa fa-facebook-square fa-3x white-text mr-md-4 "> </i></a>
+                <a class="icons-sm tw-ic " href="https://twitter.com/tamutacs " target="_blank " rel="noopener "><i class="fa fa-twitter-square fa-3x white-text mr-md-4 "> </i></a>
+                <a class="icons-sm tw-ic " href="mailto: tacs-officers@groups.tamu.edu " target="_blank " rel="noopener "><i class="fa fa-envelope-square fa-3x white-text mr-md-4 "> </i></a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script>
+    sr.reveal('.foot', { duration: 1200 })
+</script>
+<p class="text-primary text-center " style="padding-bottom: 10px ">Made with <i class="fa fa-heart "></i> by <a href="https://www.Twitter.com/@joshDBWH " class="text-primary ">@JoshDBWH</a></p>
+<!-- JS -->
+<script src="vendor/bootstrap/js/bootstrap.js "></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.js "></script>
+<script src="js/typed.js " type="text/javascript "></script>
+<script src="vendor/jquery-easing/jquery.easing.min.js "></script>
+<script src="js/scrollreveal.js "></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js "></script>
+<script src="js/creative.js "></script>
+</body>
 
-		</div>
-
-		</div>
-		
-		
-
-		<!-- Scripts -->
-
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-	</body>
 </html>
